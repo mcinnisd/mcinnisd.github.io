@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of David W. McInnis, aerospace engineer working in robotics, controls, and forward-deployed AI.">
+  <title>Resume — David McInnis</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="name" href="/">David McInnis</a>
+    <nav aria-label="Primary">
+      <a href="/projects/">Projects</a>
+      <a href="/resume/" aria-current="page">Resume</a>
+      <a href="https://github.com/mcinnisd">GitHub</a>
+    </nav>
+  </header>
+  <main class="wide resume">
+    <h1>David W. McInnis</h1>
+    <p class="contact">
+      Los Angeles, CA
+      ·
+      <a href="mailto:mcinnisdw@gmail.com">mcinnisdw@gmail.com</a>
+      ·
+      <a href="https://github.com/mcinnisd">github.com/mcinnisd</a>
+    </p>
+
+    <h2>Education</h2>
+    <div class="item-head">
+      <h3>University of Michigan</h3>
+      <span class="where">Ann Arbor, MI</span>
+    </div>
+    <p class="role-line">
+      <span>M.S.E. Aerospace Engineering (Autonomous Systems &amp; Control) — GPA 3.7</span>
+      <span class="dates">May 2025</span>
+    </p>
+    <p class="role-line">
+      <span>B.S.E. Aerospace Engineering — GPA 3.6</span>
+      <span class="dates">May 2024</span>
+    </p>
+    <p>Honors: Aerospace Honors Society – Sigma Gamma Tau (Outreach Chair), College of Engineering Dean's List.</p>
+    <p>Relevant coursework: Intro to Autonomous Robotics, 3D Robot Perception, Sensors &amp; Signals for Robotic Systems, Self-Driving Cars, Flight Trajectory Optimization, Intro to Artificial Intelligence, Natural Language Processing.</p>
+
+    <h2>Technical skills</h2>
+    <dl class="skills">
+      <div>
+        <dt>Languages</dt>
+        <dd>Python, C++, MATLAB, SQL, JavaScript, Bash/Shell, REST APIs, full-stack development</dd>
+      </div>
+      <div>
+        <dt>Robotics &amp; perception</dt>
+        <dd>ROS, OpenCV, AprilTags, MAVLink, computer vision, multi-sensor fusion, PyTorch, reinforcement learning</dd>
+      </div>
+      <div>
+        <dt>Applied AI</dt>
+        <dd>Hybrid RAG, MCP and agentic tooling, model evals and benchmarking</dd>
+      </div>
+      <div>
+        <dt>Infrastructure</dt>
+        <dd>Docker and microservices, AWS (EC2), Azure OpenAI, GCP, Linux, Git, CI/CD</dd>
+      </div>
+    </dl>
+
+    <h2>Experience</h2>
+    <section class="org" aria-label="Northrop Grumman">
+      <div class="item-head">
+        <h3>Northrop Grumman</h3>
+        <span class="where">Los Angeles, CA</span>
+      </div>
+      <div class="role-line">
+        <span>AI Software Engineer</span>
+        <span class="dates">September 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Led 5 interns over 3 months (project design and daily syncs) to deliver a live executive drone mesh demo, integrating MAVLink telemetry with a custom ground station for video and remote networking and data commands.</li>
+        <li>Architected a hybrid RAG system (vector, graph, and reranking) via Docker on AWS EC2 with Azure OpenAI, powering a lessons-learned database across 2 programs. MCP tooling (10+ tools for hyperparameter search, model tuning, and synthetic evals) is the foundation of an agentic MLOps product.</li>
+        <li>Developed a solar-cell computer-vision inspection pipeline with partially automated QA, achieving 99.7% recall and confidence-based escalation. Reduced QA workload by more than 50% while routing uncertain frames to human review.</li>
+        <li>Engineered an end-to-end anomaly evaluation pipeline — telemetry cleaned and split into train, test, and eval, synthetic signature injection, and automated amplitude bifurcation against a user-defined Fβ threshold — enabling trusted detection limits for hyperparameter optimization.</li>
+      </ul>
+      <div class="role-line">
+        <span>Space Systems Engineering Intern</span>
+        <span class="dates">May 2023 – August 2023, May 2024 – August 2024</span>
+      </div>
+      <ul>
+        <li>Optimized a space vehicle's signal strength to ground stations by calculating antenna misalignments and orbital geometry.</li>
+        <li>Improved solar-array power generation efficiency by using satellite and sun ephemeris calculations to determine and execute automated yaw-flip maneuvers.</li>
+      </ul>
+    </section>
+
+    <section class="org" aria-label="TU Dortmund">
+      <div class="item-head">
+        <h3>TU Dortmund</h3>
+        <span class="where">Dortmund, Germany</span>
+      </div>
+      <div class="role-line">
+        <span>Systems &amp; Blockchain Research Assistant</span>
+        <span class="dates">May 2022 – August 2022</span>
+      </div>
+      <ul>
+        <li>Co-developed an autonomous 3D-printing service using smart contracts and containerized microservices.</li>
+        <li>Published peer-reviewed research on decentralized workflow orchestration and containerized live telemetry data pipelines using Docker and Node-RED.</li>
+      </ul>
+    </section>
+
+    <h2>Projects</h2>
+    <section class="org" aria-labelledby="mact-heading">
+      <h3 id="mact-heading">Michigan Aerospace Cybersecurity Team — Autonomy Lead</h3>
+      <ul>
+        <li>Built an autonomous position-estimation system using cameras, AprilTags, ROS, and OpenCV to maintain positioning accuracy within a 1% error margin.</li>
+        <li>Enhanced drone cyber-resilience with onboard fail-safe navigation routines and system vulnerability patching.</li>
+      </ul>
+    </section>
+    <section class="org" aria-labelledby="stablesat-heading">
+      <h3 id="stablesat-heading">StableSat: CubeSat attitude control via reinforcement learning — Graduate thesis research</h3>
+      <ul>
+        <li>Built a Gymnasium environment modeling 6U CubeSat rotational dynamics, RK4 quaternion integration, and 7 mN·m torque saturation for Blue Canyon RWP100 reaction wheels.</li>
+        <li>Formulated and trained a PPO policy in Stable-Baselines3 using a reward that balances attitude-error progress, body-rate penalties, and terminal convergence bonuses.</li>
+        <li>Executed 100-trial Monte Carlo benchmarks against PID and LQR controllers, proving the RL agent achieved competitive pointing while reducing integrated wheel torque by ~12%.</li>
+      </ul>
+    </section>
+    <section class="org" aria-labelledby="stratosat-heading">
+      <h3 id="stratosat-heading">StratoSat — High-altitude payload software lead</h3>
+      <ul>
+        <li>Led software development for a high-altitude payload, managing multi-sensor data streaming (7 concurrent sensors) with automated error detection and reboot routines, ensuring continuous operation at 100,000 ft.</li>
+        <li>Optimized RF packet transmission efficiency, achieving a 5-second telemetry downlink rate while capturing 4K imagery.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
