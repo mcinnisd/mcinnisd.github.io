@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="In-progress log of two SO-101 leader/follower arms: teleoperation works, a sim model is training, and real episodes are next.">
+  <title>SO-101 arms — David McInnis</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="name" href="/">David McInnis</a>
+    <nav aria-label="Primary">
+      <a href="/projects/">Projects</a>
+      <a href="/resume/">Resume</a>
+      <a href="https://github.com/mcinnisd">GitHub</a>
+    </nav>
+  </header>
+  <main>
+    <p class="crumb"><a href="/projects/">Projects</a> / SO-101</p>
+    <p class="kicker">Project log</p>
+    <h1>SO-101 leader/follower arms <span class="status">In progress</span></h1>
+    <p class="lede">I built two SO-101 arms and run them as a LeRobot-style leader/follower pair. They teleoperate. I am training a model in simulation, then I will collect episodes on a simple task and fine-tune a policy. The point of that order is to look at the sim-to-real gap.</p>
+    <p class="muted">As of October 2026. No results to report yet.</p>
+
+    <h2>What the rig is</h2>
+    <p>The <a href="https://huggingface.co/docs/lerobot/so101">SO-101</a> is an open-source arm from The Robot Studio, meant to be used with Hugging Face LeRobot. In the usual leader/follower setup, one arm is moved by hand and the other tracks it. That is the setup here, and teleoperation is working.</p>
+
+    <h2>Log</h2>
+
+    <section class="log-entry" aria-labelledby="teleop-heading">
+      <h2 id="teleop-heading">Both arms teleoperate</h2>
+      <p class="when">Done</p>
+      <p>Both arms are built. Moving the leader moves the follower. That is the whole result so far: the pair runs, and I can drive the follower from the leader.</p>
+      <figure class="placeholder">
+        <figcaption>
+          <span class="placeholder-label">Photo placeholder</span>
+          The two arms on the bench. No image yet.
+        </figcaption>
+      </figure>
+      <figure class="placeholder">
+        <figcaption>
+          <span class="placeholder-label">Video placeholder</span>
+          Leader/follower teleoperation. No clip yet.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="log-entry" aria-labelledby="sim-heading">
+      <h2 id="sim-heading">A sim model is training</h2>
+      <p class="when">In progress</p>
+      <p>Training is underway in simulation. There is no loss curve, success rate, checkpoint, or comparison to post here. This entry gets numbers only after a run is actually worth quoting.</p>
+      <figure class="placeholder">
+        <figcaption>
+          <span class="placeholder-label">Figure placeholder</span>
+          Sim training, once there is something to show. No figure yet.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="log-entry" aria-labelledby="real-heading">
+      <h2 id="real-heading">Episodes, then a fine-tune</h2>
+      <p class="when">Not started</p>
+      <p>After the sim model, the next step is to collect episodes on a simple task and fine-tune a policy on that data. The task is not named here yet. No episodes have been logged, and no fine-tuned policy exists.</p>
+      <figure class="placeholder">
+        <figcaption>
+          <span class="placeholder-label">Video placeholder</span>
+          Real-task episodes or a policy rollout, when either exists. Nothing recorded yet.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="log-entry" aria-labelledby="gap-heading">
+      <h2 id="gap-heading">Sim-to-real</h2>
+      <p class="when">Open</p>
+      <p>I am exploring the gap between the sim model and the real arms: what transfers, and what does not. There is no comparison yet, so there is no finding. Notes go in this section when both sides have something to compare.</p>
+    </section>
+  </main>
+</body>
+</html>
